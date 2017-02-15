@@ -22,21 +22,20 @@ Or, if you only want to get one customer, then you would append the customer `id
 
 ##Installation
 
-Edit `index.php` and change the `$dsn` variable located at the top, here are some examples:
+Update `dbconfig.json` with an appropriate dsn. Here are some examples:
 
-- SQLite: `$dsn = 'sqlite://./path/to/database.sqlite';`
-- MySQL: `$dsn = 'mysql://[user[:pass]@]host[:port]/db/;`
-- PostgreSQL: `$dsn = 'pgsql://[user[:pass]@]host[:port]/db/;`
+- SQLite: `"sqlite://./path/to/database.sqlite"`
+- MySQL: `"mysql://[user[:pass]@]host[:port]/db/"`
+- PostgreSQL: `"pgsql://[user[:pass]@]host[:port]/db/"`
 
-If you want to restrict access to allow only specific IP addresses, add them to the `$clients` array:
+If you want to restrict access to allow only specific IP addresses, add them to the `clients` array:
 
-```php
-$clients = array
-(
-	'127.0.0.1',
-	'127.0.0.2',
-	'127.0.0.3',
-);
+```json
+"clients" = [
+	"127.0.0.1",
+	"127.0.0.2",
+	"127.0.0.3"
+]
 ```
 
 After you're done editing the file, place it in a public directory (feel free to change the filename).

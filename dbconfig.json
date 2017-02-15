@@ -1,0 +1,5 @@
+{
+  "dsn": "sqlite://localdb.sqlite",
+  "clients": [
+  ]
+}

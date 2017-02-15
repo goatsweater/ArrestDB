@@ -1,7 +1,10 @@
 <?php
 
-$dsn = '';
-$clients = [];
+$file = "dbconfig.json";
+$json = json_decode(file_get_contents($file));
+
+$dsn = $json->dsn;
+$clients = $json->clients;
 
 /**
 * The MIT License
